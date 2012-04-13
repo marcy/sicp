@@ -1,0 +1,11 @@
+(define (make-accumulator sum)
+  (lambda (x)
+    (set! sum (+ sum x))
+    sum))
+
+(define A (make-accumulator 5))
+(define B (make-accumulator 100))
+(A 10)
+(B 50)
+(B 50)
+(A 10)
